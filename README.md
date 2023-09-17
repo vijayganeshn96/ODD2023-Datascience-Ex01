@@ -19,3 +19,31 @@ Remove the null values from the data
 Save the Clean data to the file
 
 # CODE and OUTPUT
+import pandas as pd
+df = pd.read_csv("Data_set.csv")
+
+df.info()
+
+df.isnull()
+
+df.isnull().sum()
+
+df=df.dropna(subset=['show_name'])
+df.head()
+
+df['aired_on']=df['aired_on'].fillna(df['aired_on'].mode()[0])
+df.head()
+
+df['original_network']=df['original_network'].fillna(df['original_network'].mode()[0])
+df.head()
+
+df['rating']=df['rating'].fillna(df['rating'].median())
+df.head()
+
+df=df.dropna(subset=['current_overall_rank'])
+df.head()
+
+df['watchers']=df['watchers'].fillna(df['watchers'].mean())
+df.head()
+
+df.info()
