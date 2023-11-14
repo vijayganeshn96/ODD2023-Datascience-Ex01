@@ -1,7 +1,5 @@
 # Ex-01_DS_Data_Cleansing
 
-#### Reg.No : 212221040001 <br> Date : 
-
 ## AIM
 To read the given data and perform data cleaning and save the cleaned data to a file. 
 
